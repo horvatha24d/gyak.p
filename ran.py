@@ -10,7 +10,7 @@ for i in range(1,11):
     if(szam%5==0):
         print(szam,end=" ")'''
 
-s=input("páros vagy páratlan számokat kérsz:")
+'''s=input("páros vagy páratlan számokat kérsz:")
 
 if(s=="páros"):
     for i in range(2,101,2):
@@ -20,4 +20,11 @@ elif(s=="páratlan:"):
         print(i,end=" ")
 else:
     print("Helytelen bemenet:")
-        
+        '''
+
+for num in range(1,31):
+    if num%7 ==0:
+     if num%2 ==0:
+        print(f"{num}*")
+     else:
+        print(num)  
