@@ -62,3 +62,17 @@ for i in range(1, szam + 1):
     if prim:
         print(szam)
 '''
+'''
+for i in range(1, 20 + 1):
+    print(f"{i:2}  {i*i}")'''
+
+'''for i in range(99,0,-1):
+    if i % 3 ==0:
+        print(i)
+'''
+'''
+N = int(input("Add meg N értékét: "))
+
+for i in range(1, 2*N, 2): 
+    print(f"{i}^2 = {i*i}")'''
+
