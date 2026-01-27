@@ -113,23 +113,22 @@ else:
     print("Érvénytelen művelet!")
 '''
 
-
 ##
-nev=input("név:")
-összpontszam= int(input("összpontszám:"))
-pontszám=int(input("pontszám:"))
-
-
-dolgozatszazalék = szazalélk
-
-def ertekeles(dolgozatszazalék):
-    if dolgozatszazalék >=40:
-        return 'atment' 
+def szamol(max_szam,elért_pontszám):
+    szazalék = (elért_pontszám / max_szam) * 100
+    if(szazalék >= 40):
+        return str(szazalék)+'%-ra sikerult a dolgozat, sikeres!'
     else:
-        return 'nem ment át'
-    
-szazalélk = (pontszám/összpontszam)*100
-print(f"{nev} dolgozata {dolgozatszazalék:.2f}% - {ertekeles(dolgozatszazalék)}")
+        return str(szazalék)+'%-ra nem sikerult a dolgozat, sikertelen!'
+
+
+
+név=input("Add meg a neved: ")
+max_szam = int(input("Add meg a maximum számot: "))
+elért_pontszám = float(input("Add meg az elért pontszámot: "))
+
+
+print(név,szamol(max_szam,elért_pontszám,))
 
                  
 
