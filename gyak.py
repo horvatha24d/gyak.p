@@ -21,7 +21,7 @@ for i in range(8):
 print("Negatív számok darabszáma:", negativ_db)'''
 
 '''
-osszeg_paros = 0                            qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqssdddddddddddddddd
+osszeg_paros = 0                            
 db_paros = 0
 
 
@@ -79,14 +79,8 @@ for i in range(1, 2*N, 2):
 
 
 
-import wikipedia
-cim = input("Adj meg egy témát: ")
-try:    
-    tartalom = wikipedia.summary(cim, sentences=3)
-    print(tartalom)
-except wikipedia.exceptions.DisambiguationError as e:
-    print("Több találat is van a megadott témára. Kérlek, pontosítsd a keresést.")
-except wikipedia.exceptions.PageError:
-    print("Nincs találat a megadott témára.")
-except Exception as e:
-    print("Hiba történt a Wikipedia elérése során:", e)
+def osszead(szam1, szam2):
+    eredmeny = szam1 + szam2
+    return eredmeny
+eredmeny = osszead(5, 10)
+print("Az eredmény:", eredmeny)
