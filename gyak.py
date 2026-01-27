@@ -84,8 +84,8 @@ for i in range(1, 2*N, 2):
 nev = input('Mi a neved? ')
 print(koszones(nev))'''
 
-
-
+##
+'''
 def osszead(szam1, szam2):
     return szam1 + szam2
 def kivon(szam1, szam2):
@@ -111,6 +111,25 @@ elif muv == '/':
     print(oszt(szam1, szam2))
 else:
     print("Érvénytelen művelet!")
+'''
 
 
+##
+nev=input("név:")
+összpontszam= int(input("összpontszám:"))
+pontszám=int(input("pontszám:"))
+
+
+dolgozatszazalék = szazalélk
+
+def ertekeles(dolgozatszazalék):
+    if dolgozatszazalék >=40:
+        return 'atment' 
+    else:
+        return 'nem ment át'
+    
+szazalélk = (pontszám/összpontszam)*100
+print(f"{nev} dolgozata {dolgozatszazalék:.2f}% - {ertekeles(dolgozatszazalék)}")
+
+                 
 
