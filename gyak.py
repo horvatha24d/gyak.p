@@ -76,11 +76,41 @@ N = int(input("Add meg N értékét: "))
 for i in range(1, 2*N, 2): 
     print(f"{i}^2 = {i*i}")'''
 
+#fügvények
+
+'''def koszones(a):
+    return f'Szia, {a}!'
+    #itt kezdődik a main()/fő fuggvény
+nev = input('Mi a neved? ')
+print(koszones(nev))'''
 
 
 
 def osszead(szam1, szam2):
-    eredmeny = szam1 + szam2
-    return eredmeny
-eredmeny = osszead(5, 10)
-print("Az eredmény:", eredmeny)
+    return szam1 + szam2
+def kivon(szam1, szam2):
+    return szam1 - szam2
+def szoroz(szam1, szam2):
+    return szam1 * szam2
+def oszt(szam1, szam2):
+    if szam2 != 0:
+        return szam1 / szam2
+    else:
+        return "Hiba: Nullával való osztás!"
+
+szam1 = int(input("Add meg az első számot: "))
+szam2 = int(input("Add meg a második számot: "))
+muv = input("Add meg a műveletet (+, -, *, /): ")
+if muv == '+':
+    print(osszead(szam1, szam2))
+elif muv == '-':
+    print(kivon(szam1, szam2))
+elif muv == '*':
+    print(szoroz(szam1, szam2))
+elif muv == '/':
+    print(oszt(szam1, szam2))
+else:
+    print("Érvénytelen művelet!")
+
+
+
