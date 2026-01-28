@@ -141,20 +141,29 @@ print(név,szamol(max_szam,elért_pontszám,))'''
 
 import random
 
-def veletlen_szam():
-    lista = [random.randint(0,9)for i in range(10)]
-    paratlanok = sum(1 for x in lista if x % 2 == 1)
-    Ulista = list(dict.fromkeys(lista))
-    hianyzo = [u for u in range(10) if u not in Ulista]
-    
-    return{
-    'lista': lista,
-    'páratlanok száma': paratlanok,
-    'hiányzó számok': hianyzo,
-    'nem tudom': Ulista
-    }
-eredmeny = veletlen_szam()
-print(eredmeny)
+Rlista= []
+for i in range(10):
+    Rlista.append(random.randint(0,9))
+print(Rlista)
+paratlan=0
+for szam in Rlista:
+    if szam%2 ==0:
+        paratlan +=1
+print(f"A listában {paratlan} páratlan szám van.")
 
+ujjlista = list(set(Rlista))
+print(ujjlista)
+
+hianyzo = []
+for i in range(10):
+    if i not in Rlista:
+        hianyzo.append(i)
+if hianyzo:
+    print("Hiányzó számok:", hianyzo)
+else:
+    print("Nincsenek hiányzó számok.")
+
+
+    
 
 
