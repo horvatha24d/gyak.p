@@ -137,19 +137,40 @@ print(név,szamol(max_szam,elért_pontszám,))'''
 
 
 
+def feltolt(Rlista):
+    for i in range(10):
+        Rlista.append(random.randint(0,9))
+    return Rlista
+
+def paratlan(paratlandb):
+    for szam in Rlista:
+        if szam%2 ==1:
+            paratlan +=1
+    return paratlandb
+
+
+
+def ism():
+    None
+
+
+
+
+def hianyzo():
+    None
+
+
+
+
 
 
 import random
 
 Rlista= []
-for i in range(10):
-    Rlista.append(random.randint(0,9))
-print(Rlista)
-paratlan=0
-for szam in Rlista:
-    if szam%2 ==0:
-        paratlan +=1
-print(f"A listában {paratlan} páratlan szám van.")
+print(feltolt(Rlista))
+paratlandb=0
+
+print(f"A listában {paratlan(paratlandb)} páratlan szám van.")
 
 ujjlista = list(set(Rlista))
 print(ujjlista)
