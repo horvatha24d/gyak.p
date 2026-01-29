@@ -190,15 +190,40 @@ print(ujjlista,ism(ujjlista = []))
 hianyzos = []'''
 
 ##
-
-def ora(ido):
-    int(ido/60)
-    print("A film órában", int(ora(ido)))
-    return ora(ido)
-nev=input("Adja meg a film címét:")
-ido= int(input("Adja meg a film hosszát percben:"))
+'''def ora_perc(percek):
+    ora = percek // 60
+    perc = percek % 60
+    return ora, perc
 
 
+for i in range(3):
+    cim = input(f"{i+1}. film címe: ")
+    hossz = int(input("Hossz (percben): "))
+
+    ora, perc = ora_perc(hossz)
+
+    print("A(z) ",cim," hossza:", ora," óra",perc, "perc")
+'''
+##
+
+
+def szamol(cím,fperc):
+    ora=fperc[i]//60
+    perc=fperc[i]%60
+    return 'A ',cím[i],ora,"ora és ",perc,"perc"
+
+
+cím=[]
+fperc=[]
+
+for i in range(3):
+    fc=input('filmcime:')
+    cím.append(fc)
+    fp=int(input('hossz(pecben):'))
+    fperc.append(fp)
+
+for i in range(3):
+    print(szamol(cím,fperc))
 
 
     
