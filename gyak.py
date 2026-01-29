@@ -136,7 +136,7 @@ print(név,szamol(max_szam,elért_pontszám,))'''
 ##
 
 
-
+'''
 def feltolt(Rlista):
     for i in range(10):
         Rlista.append(random.randint(0,9))
@@ -145,19 +145,30 @@ def feltolt(Rlista):
 def paratlan(paratlandb):
     for szam in Rlista:
         if szam%2 ==1:
-            paratlan +=1
+            paratlandb +=1
     return paratlandb
 
 
 
-def ism():
-    None
+def ism(ujjlista):
+    for i in Rlista:
+        if(i not in ujjlista):
+            ujjlista.append(i)
+    return ujjlista
 
 
 
-
-def hianyzo():
-    None
+def hianyzo(hianyzos):
+    for i in range(10):
+        if i not in Rlista:
+            hianyzos.append(i)
+            
+    if hianyzos:
+        return "Hiányzó számok:",hianyzo(hianyzos)
+        
+    else:
+        return "Nincsenek hiányzó számok."
+    
 
 
 
@@ -172,17 +183,22 @@ paratlandb=0
 
 print(f"A listában {paratlan(paratlandb)} páratlan szám van.")
 
-ujjlista = list(set(Rlista))
-print(ujjlista)
+ujjlista = []
 
-hianyzo = []
-for i in range(10):
-    if i not in Rlista:
-        hianyzo.append(i)
-if hianyzo:
-    print("Hiányzó számok:", hianyzo)
-else:
-    print("Nincsenek hiányzó számok.")
+print(ujjlista,ism(ujjlista = []))
+
+hianyzos = []'''
+
+##
+
+def ora(ido):
+    int(ido/60)
+    print("A film órában", int(ora(ido)))
+    return ora(ido)
+nev=input("Adja meg a film címét:")
+ido= int(input("Adja meg a film hosszát percben:"))
+
+
 
 
     
