@@ -1,4 +1,9 @@
-fajl=open("adatok.txt","w")
+fajl=open("j/adatok.txt","r",encoding='UTF-8')
 
 
-fajl.close
+tartalom=fajl.read()
+print(tartalom)
+
+
+
+fajl.close()
