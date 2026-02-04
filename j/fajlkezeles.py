@@ -1,22 +1,14 @@
-'''fajl=open("j/adatok.txt","r",encoding='UTF-8')
+import random
 
+fajl =open('j/adat.txt','r',encoding='UTF-8')
 
-tartalom=fajl.read()
-print(tartalom)
+tart=fajl.read()
+Lista=(tart.split())
 
+for i in range(len(Lista)):
+    Lista[i]=int(Lista[i])
 
-
-fajl.close()
-'''
-
-
-
-fajl =open('j/adat.txt','w',encoding='UTF-8')
-
-
-fajl.write('Helló Világ')
-
-
+print(Lista)
 
 
 fajl.close()
