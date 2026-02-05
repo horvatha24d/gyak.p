@@ -7,9 +7,11 @@ Lista=(tart.split())
 
 for i in range(len(Lista)):
     Lista[i]=int(Lista[i])
-
+ 
 print(Lista)
 
 
 fajl.close()
+
+
 
