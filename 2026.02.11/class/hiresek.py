@@ -1,4 +1,3 @@
-
 from hiresek_alap import HíresNő
 
 hiresek = []
