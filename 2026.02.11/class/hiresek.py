@@ -14,7 +14,7 @@ for nő in hiresek:
     print(f"{nő.előtag()} {nő.név} egy híres {nő.foglalkozás}")'''
 
 
-class HíresNő:
+'''class HíresNő:
     def __init__(self, név, foglalkozás, nemzetiség):
         self.név = név
         self.foglalkozás = foglalkozás
@@ -37,4 +37,19 @@ for i in range(3):
     hiresnok.append(hiresno)
 
 for elem in hiresnok:
-    print(elem.elötag(), elem.név, elem.foglalkozás)
+    print(elem.elötag(), elem.név, elem.foglalkozás)'''
+
+
+class állat:
+    def __init__(self,nev,testomeg):
+        self.nev=nev
+        self.tetomeg=testomeg
+
+
+for i in range(3):
+    nev=input("Add meg egy állat nevét:")
+    testomeg=input("Add meg a testomegét:")
+    allat=állat(nev,testomeg)
+    vege=f"{allat.nev} {int(allat.tetomeg)}"
+    f=open("2026.02.11/állatok.txt","w").write(vege)
+    f.close()
