@@ -40,16 +40,44 @@ for elem in hiresnok:
     print(elem.elötag(), elem.név, elem.foglalkozás)'''
 
 
-class állat:
+'''class állat:
     def __init__(self,nev,testomeg):
         self.nev=nev
         self.tetomeg=testomeg
 
-
+tomegek=[]
 for i in range(3):
     nev=input("Add meg egy állat nevét:")
     testomeg=input("Add meg a testomegét:")
     allat=állat(nev,testomeg)
     vege=f"{allat.nev} {int(allat.tetomeg)}"
     f=open("2026.02.11/állatok.txt","w").write(vege)
-    f.close()
+    f.close()'''
+
+
+
+class Allatok:
+    def __init__(self,nev,testomeg):
+        self.nev=nev
+        self.testomeg=testomeg
+
+allat=[]
+for i in range(3):
+    nev=input("Add meg egy állat nevét:")
+    testomeg=input("Add meg a testomegét:")
+    pallat=Allatok(nev,testomeg)
+    allat.append(pallat)
+
+
+#legnehezebb állat
+legn=allat[0]
+for pallat in allat:
+    if (int(pallat.testomeg)>int(legn.testomeg)):
+        legn=pallat
+        '''suly=open("állatok.txt","w",encoding="UTF-8")
+        suly.write(f"A legnehezebb állat: {legn.nev} {legn.testomeg}")
+        suly.close()'''
+
+f=open("2026.02.11/állatok.txt","w",encoding="UTF-8")
+f.write(f"A legnehezebb állat: {legn.nev} {legn.testomeg}")
+f.close()
