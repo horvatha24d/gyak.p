@@ -21,7 +21,7 @@ for sor in Ltartalom:
 
 #adaatok ellenőrzése
 for diak in LLtartalim:
-    print(diak.nev,)
+    print(diak.nev, diak.magassag)
 
 #Elso feladat:diakok szama
 
@@ -33,3 +33,10 @@ for diak in LLtartalim:
     if diak.magassag>legmagasabb.magassag:
         legmagasabb=diak
 print("A legmagasabb diák:", legmagasabb.nev, legmagasabb.magassag,"cm")
+
+
+
+#harmadik feladat: rendezés
+Lrendzett=sorted(LLtartalim,key=lambda m: m.magassag,reverse=True)
+for diak in Lrendzett:
+    print(diak.nev, diak.magassag)
