@@ -64,7 +64,7 @@ class Allatok:
 allat=[]
 for i in range(3):
     nev=input("Add meg egy állat nevét:")
-    testomeg=input("Add meg a testomegét:")
+    testomeg=input("Add meg a testomegét (kg):")
     pallat=Allatok(nev,testomeg)
     allat.append(pallat)
 
@@ -79,5 +79,5 @@ for pallat in allat:
         suly.close()'''
 
 f=open("2026.02.11/állatok.txt","w",encoding="UTF-8")
-f.write(f"A legnehezebb állat: {legn.nev} {legn.testomeg}")
+f.write(f"A legnehezebb állat: {legn.nev} {legn.testomeg} kg")
 f.close()
