@@ -4,3 +4,4 @@ class Diak:
         self.osztaly=osztaly
         self.eredmeny=eredmeny
 
+    
